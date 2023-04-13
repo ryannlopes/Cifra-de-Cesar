@@ -10,19 +10,19 @@
 <body>
 	 <!-- Menu Navbar -->
 	 <section >
-		<nav class="navbar navbar-dark bg-primary">
+		<nav class="navbar navbar-dark">
 			<a class="navbar-brand" href="#">Cifra de César</a>
 		  </nav>
 	  </section>
 	<form>
 		<label for="texto">Texto:</label>
-		<input type="text" class="form-control"  id="texto" name="texto" onkeypress="bloquearAcentosECedilha(event)" required>
+		<input type="text" class="form-control"  id="texto" name="texto" onkeypress="blockAcentosECedilha(event)" required>
 		<label for="chave">Chave:</label>
 		<input type="number" class="form-control"  class="form-control"  id="chave" name="chave" min="1" max="25" required>
 		<label for="resultado-descodificado">Resultado codificado:</label>
-		<textarea id="resultado-codificado" class="form-control"  name="resultado-codificado" onkeypress="bloquearAcentosECedilha(event)" rows="5" readonly></textarea>
+		<textarea id="resultado-codificado" class="form-control"  name="resultado-codificado" onkeypress="blockAcentosECedilha(event)" rows="5" readonly></textarea>
         <label for="resultado-descodificado">Resultado descodificado:</label>
-		<textarea id="resultado-descodificado" class="form-control"  name="resultado-descodificado" onkeypress="bloquearAcentosECedilha(event)" rows="5" readonly></textarea>
+		<textarea id="resultado-descodificado" class="form-control"  name="resultado-descodificado" onkeypress="blockAcentosECedilha(event)" rows="5" readonly></textarea><br>
 		<button type="button" class="btn btn-success" onclick="codificar()">Cifrar</button>
         <button type="button" class="btn btn-primary" onclick="descodificar()">Descifrar</button>
 	</form>

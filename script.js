@@ -41,7 +41,7 @@ function descodificar() {
 }
 
 // Função para bloquear letras com acentos e Ç
-function bloquearAcentosECedilha(event) {
+function blockAcentosECedilha(event) {
     var inputValue = event.which || event.keyCode;
     var char = String.fromCharCode(inputValue);
     var regex = /[a-z A-Z]/;
