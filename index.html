@@ -4,6 +4,7 @@
 	<title>Cifra de César</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 	<form>
@@ -19,4 +20,11 @@
 		<textarea id="resultado-descodificado" name="resultado-descodificado" rows="5" readonly></textarea>
 	</form>
 	<script src="script.js"></script>
+	<script>
+        $(function() {
+            $('input').keyup(function() {
+                this.value = this.value.toLocaleUpperCase();
+            });
+        });
+    </script>
 </body>
