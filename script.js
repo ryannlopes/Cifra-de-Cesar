@@ -39,3 +39,14 @@ function descodificar() {
     }
     document.getElementById("resultado-descodificado").value = result;
 }
+
+// Função para bloquear letras com acentos e Ç
+function bloquearAcentosECedilha(event) {
+    var inputValue = event.which || event.keyCode;
+    var char = String.fromCharCode(inputValue);
+    var regex = /[a-z A-Z]/;
+  
+    if (!regex.test(char)) {
+      event.preventDefault();
+    }
+  }
