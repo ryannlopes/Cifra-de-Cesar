@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Cifra de César</title>
+	<title>Cerca de Trilho</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -14,7 +14,7 @@
 	<!-- Menu Navbar -->
 	<section>
 		<nav class="navbar navbar-expand-lg">
-			<a class="navbar-brand" href="#">Cifra de Cesar</a>
+			<a class="navbar-brand" href="#">Cerca de Trilho</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -39,20 +39,19 @@
 		<input type="text" class="form-control" id="texto" name="texto" onkeypress="blockAcentosECedilha(event)"
 			required>
 		<label for="chave">Chave:</label>
-		<input type="number" class="form-control" class="form-control" id="chave" name="chave" min="1" max="25"
-			required>
-		<label for="resultado-descodificado">Resultado codificado:</label>
+		<input type="number" class="form-control" class="form-control" id="chave" name="chave"required>
+		<label for="resultado-codificado">Resultado codificado:</label>
 		<textarea id="resultado-codificado" class="form-control" name="resultado-codificado"
 			onkeypress="blockAcentosECedilha(event)" rows="5" readonly></textarea>
 		<label for="resultado-descodificado">Resultado descodificado:</label>
 		<textarea id="resultado-descodificado" class="form-control" name="resultado-descodificado"
 			onkeypress="blockAcentosECedilha(event)" rows="5" readonly></textarea><br>
-		<button type="button" class="btn btn-success" onclick="codificar()">Cifrar</button>
-		<button type="button" class="btn btn-primary" onclick="descodificar()">Descifrar</button>
+		<button type="button" class="btn btn-success" onclick="encodeRailFenceWithKey()">Cifrar</button>
+		<button type="button" class="btn btn-primary" onclick="decodeRailFenceWithKey()">Descifrar</button>
 	</form>
 
 
-	<script src="script.js"></script>
+	<script src="trilho.js"></script>
 	<script>
 		$(function () {
 			$('input').keyup(function () {
